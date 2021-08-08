@@ -53,10 +53,33 @@ function calcular() {
         case '/':
             res = myCalc.dividir(num1, num2);
             break;
+        
         case '*':
             res = myCalc.multiplicar(num1, num2);
             break;
+
+        case '**':
+            res = myCalc.potenciacao(num1, num2);
+            break;
+
+        case '$':
+            res = myCalc.radiciacao(num1);
+            break;
     }
+    res = res.toString();
+    txtInput.value = res.length <= 10 ? res : res.substr(0, 10);
+    num1 = txtInput.value;
+    num2 = '';
+    operacao = '';
+}
+
+function radiciar() {
+    if (num1 === '') {
+        return;
+    }
+    var res = '';
+    num1 = parseFloat(num1);
+    res = myCalc.radiciacao(num1);
     res = res.toString();
     txtInput.value = res.length <= 10 ? res : res.substr(0, 10);
     num1 = txtInput.value;
