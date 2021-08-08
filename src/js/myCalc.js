@@ -24,6 +24,18 @@ var myCalc = {
 		var resultado = (n1 / n2);
 
 		return Math.round(resultado * 100) / 100;
+	},
+
+	potenciacao: function (n1, n2) {
+		var resultado = n1 ** n2;
+
+		return Math.round(resultado * 100) / 100;
+	},
+
+	radiciacao: function (n1) {
+		var resultado = Math.sqrt(n1);
+
+		return Math.round(resultado * 100) / 100;
 	}
 }
 
